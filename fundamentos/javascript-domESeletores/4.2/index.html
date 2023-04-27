@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Desafio - JavaEscripito</h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <p>Último parágrafo.</p>
+    <script>
+      function elementP () {
+        const tagP = document.getElementsByTagName('p')[1];
+              tagP.innerHTML = "Ser Rica!"      
+      };
+      tagP();
+
+      function editCor () {
+        const cor = document.getElementsByClassName('main-content');
+        cor.style.background = 'rgb(76, 164, 109)';
+      };
+      editCor;
+
+      function editCorbr () {
+        const nova = document.getElementsByClassName('center-content');
+        nova.style.background = 'white';
+      };
+      editCorbr;
+      
+      function titulo () {
+        const novoTitulo = document.getElementsByTagName('h1');
+        novoTitulo.innerText = 'Desafio - JavaScript';
+      };
+      titulo();
+
+      function maiusculas () {
+        const tagP = document.getElementsByTagName('p')[0];
+        tagP.innerText = tagP.innerText.toLowerCase();
+      }
+      maiusculas();
+
+      function todasTags () {
+        const p = document.getElementsByTagName('p');
+        const concat = '';
+
+        for (let i = 0; i < p.length -1; i += 1) {
+          concat += p[i].innerText + '';
+        }
+        p[3].innerText = concat;
+      };
+      todasTags();
+
+    </script>
+  </body>
+</html>
